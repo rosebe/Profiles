@@ -72,6 +72,7 @@ DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,moatads.com
 DOMAIN-SUFFIX,mobclix.com
 DOMAIN-SUFFIX,mopub.com
+DOMAIN-SUFFIX,okjhb.xyz
 DOMAIN-SUFFIX,openx.net
 DOMAIN-SUFFIX,qchannel01.cn
 DOMAIN-SUFFIX,rayjump.com
@@ -97,6 +98,7 @@ DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,wedolook.com
 DOMAIN-SUFFIX,wshtgame.com
 DOMAIN-SUFFIX,xdrig.com
+DOMAIN-SUFFIX,zu08e.cn
 
 DOMAIN-SUFFIX,ad.daum.net
 DOMAIN-SUFFIX,track.xiachufang.com
@@ -120,8 +122,6 @@ DOMAIN,adsdk.dmzj.com
 DOMAIN,adserver.pandora.com
 DOMAIN,adui.tg.meitu.com
 DOMAIN,adv.bandi.so
-DOMAIN,adx.hupu.com
-DOMAIN,adx-api.hupu.com
 DOMAIN,adxserver.ad.cmvideo.cn
 DOMAIN,app-ad.variflight.com
 DOMAIN,applog.mobike.com
@@ -197,8 +197,8 @@ DOMAIN,xlog-va.byteoversea.com
 DOMAIN,adx.yiche.com
 DOMAIN,log.ycapp.yiche.com
 # > 百词斩
-DOMAIN,advertise.baicizhan.org
 DOMAIN,advertise.baicizhan.com
+DOMAIN,advertise.baicizhan.org
 # (C)
 # > CNTV
 DOMAIN,galaxy.bjcathay.com
@@ -206,6 +206,7 @@ DOMAIN,mdrecv.app.cntvwb.cn
 DOMAIN,sdapprecv.app.cntvwb.cn
 DOMAIN,vdapprecv.app.cntvwb.cn
 # > ChinaNet
+DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
 # > 车来了
@@ -226,6 +227,10 @@ DOMAIN-SUFFIX,da.hunantv.com
 DOMAIN-SUFFIX,log.hunantv.com
 DOMAIN,log.v2.hunantv.com
 DOMAIN,v2.log.hunantv.com
+# > Hupu
+DOMAIN,ad-goblin.hupu.com
+DOMAIN,adx.hupu.com
+DOMAIN,adx-api.hupu.com
 # (I)
 # > iQiyi
 DOMAIN,ifacelog.iqiyi.com
@@ -725,6 +730,8 @@ URL-REGEX,^https?:\/\/notch\.qdaily\.com\/api\/v2\/boot_ad
 URL-REGEX,^https?:\/\/open\.qyer\.com\/qyer\/startpage\/
 URL-REGEX,^https?:\/\/open\.qyer.com\/qyer\/config\/get
 URL-REGEX,^https?:\/\/media\.qyer\.com\/ad\/
+# > 亲宝宝
+URL-REGEX,^https?:\/\/api\.qbb6\.com\/ad\/
 
 # > R
 # > 人人视频
@@ -751,8 +758,7 @@ URL-REGEX,^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/
 URL-REGEX,^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json
 URL-REGEX,^https?:\/\/api\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap
 # > StarFans
-URL-REGEX,^https?:\/\/a\.sfansclub\.com\/business\/t\/ad\/
-URL-REGEX,^https?:\/\/a\.sfansclub\.com\/business\/t\/boot\/screen\/index
+URL-REGEX,^https?:\/\/g\.cdn\.pengpengla\.com\/starfantuan\/boot-screen-info\/
 # > 什么值得买
 URL-REGEX,^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading
 # > 四季線上影視4gTV

@@ -1,6 +1,6 @@
 ## 简介
 
-Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的配置规则文件
+Clash、Kitsunebi、Mellow、Potatso、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge(2/3+) 的配置规则文件
 
 ## 规则
 
@@ -13,7 +13,7 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 - 使用公共 DNS 达到快速、准确、稳定及安全的解析
 - 国内直连、海外加速
 - Apple 服务加速
-- 海外媒体（部分）服务指定节点
+- 海外流媒体（部分）及大陆流媒体面向港澳台限定（部分）服务指定节点
 
 ### 专业版
 
@@ -26,7 +26,7 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 
 ### 回国版
 
-- 国内媒体服务解锁
+- 国内流媒体服务解锁
 - 拦截应用广告
   ⚠️ 网页广告请使用 Safari 内容拦截器如 [ADGuard](https://itunes.apple.com/app/apple-store/id1047223162?mt=8) 或集成去广告功能浏览器
 
@@ -39,6 +39,7 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | Clash([ClashX](https://github.com/yichengchen/clashX) / [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg)) |                              无                              | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Clash/Pro.yaml) | [BacktoCN](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Clash/BacktoCN.yaml) |
 | Kitsunebi([iOS](https://apps.apple.com/app/apple-store/id1446584073) / [Android](https://play.google.com/store/apps/details?id=fun.kitsunebi.kitsunebi4android&hl=zh)) | [Basic](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Kitsunebi/Basic.conf) | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Kitsunebi/Pro.conf) | [BacktoCN](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Kitsunebi/BacktoCN.conf) |
+| [Mellow](https://github.com/eycorsican/mellow/blob/master/README.md) |                              无                              | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Mellow/Pro.conf) |                              无                              |
 | [Potatso 2](https://apps.apple.com/app/apple-store/id1162704202) - *停止支持* |                              无                              | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Potatso/Potatso.conf) |                              无                              |
 | [Quantumult](https://apps.apple.com/app/apple-store/id1252015438) \| [快捷指令](https://www.icloud.com/shortcuts/44f0cffd3ddf422ea28fb94380cec417) | [Basic](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Basic.conf) | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Pro.conf) / [Rejection](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Rejection.conf) | [BacktoCN](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/BacktoCN.conf) / [Rejection](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/Rejection.conf) |
 | [Quantumult X](https://apps.apple.com/app/apple-store/id1443988620) \| [Zure 图标组](https://github.com/zealson/Zure/blob/master/README.md) |                              无                              | [Pro](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Pro.conf) | [BacktoCN](https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/BacktoCN.conf) |
@@ -76,7 +77,7 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 
 #### 为什么没有海外 DNS
 
-首先目前海外 DNS 基本在国内没有节点会导致 CDN **解析不准确**如解析到香港节点（包括腾讯的 119.28.28.28因运营商没有对路由进行更新所导致）
+首先目前海外 DNS 基本在国内没有节点会导致 CDN **解析不准确**如解析到香港节点（包括腾讯的 119.28.28.28 因运营商没有对路由进行更新所导致）
 
 其次很多人觉得海外公共 DNS 干净，而实际情况是不仅因为解析结果没有指向适合你网络的 CDN 上导致网络卡顿，被污染的域名依旧污染，甚至部分区域的运营商还对海外 DNS 请求完全进行抢答，所以没有意义。
 
@@ -91,26 +92,34 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 1. Unbreak.list - 用于修正 PROXY 和 REJECT 行为
 2. Advertising.list - 广告、行为分析、隐私追踪（macOS 不建议开启）
 3. Hijacking.list - 劫持（运营商、臭名昭著的诈骗网站或恶意应用）
-4. ForeignMedia.list - 国际流媒体
-5. DomesticMedia.list - 国内流媒体（可不加）
+4. GlobalMedia(ForeignMedia).list - 国际流媒体
+5. HKMTMedia(DomesticMedia).list - 大陆流媒体面向港澳台限定（可不加）
 6. Global.list - 国际网站/应用
 7. Apple.list - Apple 服务（可不加）
 9. China.list - 国内网站/应用
 
 **说明**
 
-- 如若**不需要**观看哔哩哔哩、爱奇艺面向港澳台的限定内容可不加「DomesticMedia.list」。
+- 如若**不需要**观看哔哩哔哩、爱奇艺面向港澳台的限定内容可不加「HKMTMedia(DomesticMedia).list」。
 - 如若**不需要**代理 Apple 服务可不加「Apple.list」，若加入必须在「Global.list」和「China.list」之间。
-- 如需细化流媒体如「Youtube.list」需要加在「ForeignMedia.list」之前。
+- 如需细化流媒体如「Youtube.list」需要加在「GlobalMedia(ForeignMedia).list」之前。
 - 如需应用类的如「Telegram.list、Google.list、PayPal.list」需要加在「Global.list」之前。
 
-一般情况下默认引入上述 8 个（如不需要 DomesticMedia 和 Apple 可减至 6 个）即可，那么为什么还有更多的如「Youtube.list、Netflix.list、Spotify.list、Mail.list」？
+一般情况下默认引入上述 8 个（如不需要 HKMTMedia(DomesticMedia) 和 Apple 可减至 6 个）即可，那么为什么还有更多的如「Youtube.list、Netflix.list、Spotify.list、Mail.list」？
 
-1. 对于一些「进阶玩家」来说其拥有专用于观看流媒体的线路，比如观看限定区域的 Netflix、Hulu、HBO 等，所以引入相关 .list 建立一个策略组设置相应服务区节点线路。但对于普通用户来说，那些「Youtube.list、Hulu.list」来说都是集成在「ForeignMedia.list」中**不需要**额外引入。
+1. 对于一些「进阶玩家」来说其拥有专用于观看流媒体的线路，比如观看限定区域的 Netflix、Hulu、HBO 等，所以引入相关 .list 建立一个策略组设置相应服务区节点线路。但对于普通用户来说，那些「Youtube.list、Hulu.list」来说都是集成在「GlobalMedia(ForeignMedia).list」中**不需要**额外引入。
 2. 对于一些「机场」来说为了避免有恶意用户利用节点线路滥发垃圾邮件，所以对服务器相关邮件端口进行了屏蔽，这时候可以引入「Mail.list」指定一个可收发邮件对节点。
 3. 对于一些「进阶玩家」来说其拥有高速的新加坡节点线路，为了提升 Telegram 使用体验所以会引入「Telegram.list」指定一些节点。
 
 综上所述、以此类推，独立的 .list 一般都集成在了默认的 6 条 .list 文件中，如果你没有进阶的定制化需求是**不 需 要**引入那么多的，根据需求使用才是 Ruleset/Filter 的灵活用法，规则不是越多越好。
+
+**获取更多 list**
+
+Surge：https://github.com/ConnersHua/Profiles/tree/master/Surge/Ruleset
+
+Quantumult X：https://github.com/ConnersHua/Profiles/tree/master/Quantumult/X/Filter
+
+.list 文件真实地址点击「Raw」获得，直接复制网页地址如「 https://github.com/ConnersHua/Profiles/blob/master/Quantumult/X/Filter/Advertising.list 」是错误的，确保你引用的地址是「 https://raw.githubusercontent.com/ 」开头
 
 ------
 
@@ -166,7 +175,7 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 
 规则对于 Speedtest 不是绝对的直连也不是绝对的代理，对于国内测速点是直连，对于国外测速点是代理。
 
-默认打开  Speedtest 会自动选择适用于代理服务器节点的国外测速节点，若要进行国内网速测试手动修改「测速点」搜索你所在城市或省会的拼音然后选择运营商即可。
+默认打开 Speedtest 会自动选择适用于代理服务器节点的国外测速节点，若要进行国内网速测试手动修改「测速点」搜索你所在城市或省会的拼音然后选择运营商即可。
 
 ------
 
@@ -241,4 +250,3 @@ Clash、Kitsunebi、Quantumult(X)、Shadowrocket、Pepi(ShadowRay)、Surge 的�
 ## 许可
 
 [MIT License](https://github.com/ConnersHua/Profiles/raw/master/LICENSE)
-
